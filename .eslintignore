@@ -1,0 +1,4 @@
+.coverage
+flow-typed
+lib/vendor
+resources/assets/scripts
