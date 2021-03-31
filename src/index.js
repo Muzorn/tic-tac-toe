@@ -23,6 +23,11 @@ class Board extends React.Component {
   handleClick(i) {
     const squares = this.state.squares.slice();
 
+    // Evitamos nuevos clicks si hay ganador o si la casilla ya tiene ficha puesta
+    if (calculateWinner(squares) || squares[i]) {
+      return;
+    }
+
     // Opción inicial mía
     // (this.state.xIsNext) ? squares[i] = 'X' : squares[i] = 'O';
     // Opción del cursillo
